@@ -29,15 +29,6 @@
     "popup_summarizing_image": {
         "message": "Summarizing the image"
     },
-    "popup_translating": {
-        "message": "Translating"
-    },
-    "popup_translating_captions": {
-        "message": "Translating the captions"
-    },
-    "popup_translating_image": {
-        "message": "Translating the image"
-    },
     "popup_processing": {
         "message": "Processing"
     },
@@ -54,7 +45,7 @@
         "message": "This page cannot be summarized or translated."
     },
     "results_title": {
-        "message": "Results - Summarize and Translate with Gemini"
+        "message": "Ask more with Gemini"
     },
     "results_button_clear": {
         "message": "Clear conversation"
@@ -96,7 +87,7 @@
         "message": "User-specified Model"
     },
     "options_language": {
-        "message": "Summarize in / Translate to"
+        "message": "Summarize in"
     },
     "options_language_user": {
         "message": "User-specified Language"

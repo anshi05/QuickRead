@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="extension_name">Summarize and Translate with Gemini</title>
+    <title data-i18n="extension_name">QuickRead: Summarize with Gemini</title>
     <link rel="stylesheet" href="css/new.min.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,8 +15,8 @@
             font-family: sans-serif;
             margin: 0;
             padding: 1rem;
-            background-color: #0b0d10; /* Dark background */
-            color: #e0e0e0; /* Light text for contrast */
+            background-color: #0b0d10; 
+            color: #e0e0e0; 
             overflow: hidden;
             border-radius: 10px;
             scrollbar-width: none;
@@ -46,28 +46,26 @@
         }
 
         #content {
-            background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-            padding: 1.5rem; /* Increased padding */
+            background: rgba(255, 255, 255, 0.1); 
+            padding: 1.5rem; 
             border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); /* Subtle shadow */
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); 
             margin-bottom: 2rem;
             max-height: 250px;
             overflow-y: auto;
             scrollbar-width: none;
             text-align: left;
-            color: #e0f2fe; /* Soft bluish white */
-            font-family: "Poppins", sans-serif; /* Different font */
-            font-size: 0.9rem; /* Adjusted font size */
-            line-height: 1.6; /* Improved line height */
-            letter-spacing: 0.5px; /* Slight letter spacing */
+            color: #e0f2fe; 
+            font-family: "Poppins", sans-serif; 
+            font-size: 0.9rem; 
+            line-height: 1.6; 
+            letter-spacing: 0.5px; 
 
             /* Glassy effect */
-            backdrop-filter: blur(10px); /* Blur effect */
-            -webkit-backdrop-filter: blur(10px); /* Safari support */
-            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-            border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
-
-            /* Shiny border animation */
+            backdrop-filter: blur(10px); 
+            -webkit-backdrop-filter: blur(10px); 
+            background-color: rgba(255, 255, 255, 0.1); 
+            border: 1px solid rgba(255, 255, 255, 0.2); 
             position: relative;
             overflow-x: hidden;
             
@@ -79,7 +77,7 @@
             top: 0;
             left: -100%;
             width: 60%;
-            height: .5px; /* Thickness of the shiny border */
+            height: .5px; 
             background: linear-gradient(
                 90deg,
                 transparent,
@@ -89,14 +87,14 @@
             animation: shine 3s linear infinite;
         }
 
-@keyframes shine {
-    0% {
-        left: -100%;
-    }
-    100% {
-        left: 100%;
-    }
-}
+        @keyframes shine {
+            0% {
+                left: -100%;
+            }
+            100% {
+                left: 100%;
+            }
+        }
         
         button:hover {
             background: transparent;
@@ -129,16 +127,19 @@
 
 <body>
     <header>
-        <div style="display: flex;">
-        <img src="img/icon-128.png" alt="" width="64" height="64">
-        <div style="display: flex; flex-direction: column; justify-content: center;">
-        <h1>QuickRead</h1>
-        <h6 style=" font-weight: 100; font-size: 13px; margin-top: -1em; margin-left:1px;">Summarize with Gemini</h6>
+        <div style="display: flex; justify-content: space-between; width: 100%;">
+            <div style="display: flex;">
+                <img src="img/icon-128.png" alt="" width="64" height="64">
+                <div style="display: flex; flex-direction: column; justify-content: center;">
+                    <h1>QuickRead</h1>
+                    <h6 style=" font-weight: 100; font-size: 13px; margin-top: -1em; margin-left:1px;">Summarize with Gemini</h6>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: end; align-items: end;">
+                <button id="options" data-i18n="popup_button_options" style="font-size: large; padding: 3px 8px;">&#x2197;</button>
+            </div>
         </div>
-        </div>
-        
     </header>
-
 
     <p id="content" dir="auto"></p>
     <p id="status"></p>
@@ -151,9 +152,9 @@
         <button id="run" data-i18n="popup_button_run">Summarize</button>
         
     </div>
-
-    <div>
-        <button id="options" data-i18n="popup_button_options">Open options page</button>
+    
+    <div>        
+        <button id="results" data-i18n="popup_button_results">Ask follow-up Questions</button>
     </div>
 
     <div>

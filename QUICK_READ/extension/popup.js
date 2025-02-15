@@ -13,7 +13,7 @@ const copyContent = async () => {
   await navigator.clipboard.writeText(clipboardContent);
 
   // Change the button text to "Copied!" and add a tick icon
-  copyButton.innerHTML = "Copied! ✓";
+  copyButton.innerHTML = "✓ Copied";
   copyButton.style.backgroundColor = "#a6a6a646"; // Green background
   copyButton.style.borderColor = "#a6a6a646";
 
@@ -209,6 +209,7 @@ const main = async (useCache) => {
     document.getElementById("run").disabled = true;
     document.getElementById("languageModel").disabled = true;
     document.getElementById("copy").disabled = true;
+    document.getElementById("results").disabled = true;
 
     // Extract the task information
     const { actionType, mediaType, taskInput } = await extractTaskInformation(languageCode);
@@ -322,6 +323,7 @@ const main = async (useCache) => {
     document.getElementById("run").disabled = false;
     document.getElementById("languageModel").disabled = false;
     document.getElementById("copy").disabled = false;
+    document.getElementById("results").disabled = false;
 
     // Convert the content from Markdown to HTML
     const div = document.createElement("div");
@@ -375,6 +377,11 @@ document.getElementById("run").addEventListener("click", () => {
 
 document.getElementById("copy").addEventListener("click", copyContent);
 
+document.getElementById("results").addEventListener("click", () => {
+  chrome.tabs.create({ url: chrome.runtime.getURL(`results.html?i=${resultIndex}`) }, () => {
+    window.close();
+  });
+});
 
 document.getElementById("options").addEventListener("click", () => {
   chrome.runtime.openOptionsPage(() => {

@@ -13,8 +13,6 @@ const restoreOptions = async () => {
   document.getElementById("apiKey").value = options.apiKey;
   document.getElementById("languageModel").value = options.languageModel;
   document.getElementById("userModelId").value = options.userModelId;
-  document.getElementById("noTextCustomPrompt").value = options.noTextCustomPrompt;
-  document.getElementById("textCustomPrompt").value = options.textCustomPrompt;
   document.getElementById("theme").value = options.theme;
 
   // Set the default language model if the language model is not set
