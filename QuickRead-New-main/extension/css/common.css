@@ -1,0 +1,37 @@
+body {
+  width: 640px;
+}
+
+button {
+  margin-bottom: .5rem;
+}
+
+body.narrow {
+  width: 84%;
+}
+
+body[data-theme="light"] {
+  --nc-tx-1: #ebe6e6;
+  --nc-tx-2: #e4dfdf;
+  --nc-bg-1: #848181;
+  --nc-bg-2: #232323;
+  --nc-bg-3: #606061;
+  --nc-lk-1: #cbd8e7;
+  --nc-lk-2: #b0c9e6;
+  --nc-lk-tx: #4f4d4d;
+  --nc-ac-1: #62c5af;
+  --nc-ac-tx: #c9e8ec;
+}
+
+body[data-theme="dark"] {
+  --nc-tx-1: #FFFFFF;
+  --nc-tx-2: #EEEEEE;
+  --nc-bg-1: #000000;
+  --nc-bg-2: #111111;
+  --nc-bg-3: #222222;
+  --nc-lk-1: #3291FF;
+  --nc-lk-2: #0070F3;
+  --nc-lk-tx: #FFFFFF;
+  --nc-ac-1: #7928CA;
+  --nc-ac-tx: #FFFFFF;
+}
