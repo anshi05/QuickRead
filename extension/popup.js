@@ -24,7 +24,7 @@ const copyContent = async () => {
 
   // Reset the button after 2 seconds
   setTimeout(() => {
-    copyButton.innerHTML = "Copy";
+    copyButton.innerHTML = '<i class="fa-regular fa-copy" style="margin-right: 5px; margin-top:4px;"></i> Copy';
     copyButton.style.backgroundColor = "transparent";
     copyButton.style.borderColor = "#a6a6a646";
   }, 2000);

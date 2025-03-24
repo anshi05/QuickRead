@@ -31,9 +31,12 @@ def main():
         print(languageCode, languageName)
         time.sleep(5)
 
-        system_instruction = f"Translate the following content to {languageName} in a formal tone. " \
-            "The word \"Gemini\" must be left in English. " \
-            "Output in plain text without using Markdown."
+        system_instruction =f"Translation Instruction:\n\n"
+        f"Analyze the image and translate its visible text into {languageName} in a formal tone.\n\n"
+        "Important Guidelines:\n"
+        "- The word 'Gemini' must be left in English.\n"
+        "- The translated text should be structured with proper headings and paragraphs.\n\n"
+        "Provide the translated content in a well-formatted manner with clear sectioning."
 
         model = google.generativeai.GenerativeModel(
             model_name="gemini-2.0-flash",
